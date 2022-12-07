@@ -1,7 +1,6 @@
 # D2R-instances-launcher
 
-######## This guide is brought to you by - boianst - a fellow D2R gamer ########
-######## Contact me at: boianst#6545 on Discord  ########
+### This guide is brought to you by - boianst - a fellow D2R gamer | Contact me at: boianst#6545 on Discord  ###
 
 Use this script at your own risk!
 
@@ -25,7 +24,7 @@ What this script cannot do for you:
 1. Work if you have double factor authentication enabled on your account(s) - there is a way for this to work, but I couldn't do it. If someone out there reads this and can help me implement it please contact me. 
 
 If you see "EDIT_THIS" somewhere in the guide you're supposed to replace the value with whatever is the folder path that you chose on your PC.
-Short version:
+
 1. Go to https://github.com/boianstefanov/D2R-instances-launcher, click on Code > Download ZIP
 
 3. Next, we need to save a snapshot of your HD settings. Log in the game as you normally would and tweak all desired options. Exit the game. 
@@ -74,6 +73,7 @@ OPTIONAL - if you don't want to press Yes/No every time and have the powershell 
 33. You must follow step 17-32 again to do the same for the other (HD) shortcut - this is an example how to setup the LD one
 
 ******** Frequently asked questions ********
+
 Do I need to download any additional software for this?
 Analogical to the ProcessExplorer's tutorials we need to use (basically the same thing) called Handler, it's in the Git repository, for your convenience. It's by Microsoft's sysinternals and can be officially downloaded here: https://docs.microsoft.com/en-us/sysinternals/downloads/handle
 
