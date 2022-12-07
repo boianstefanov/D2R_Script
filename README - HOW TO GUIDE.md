@@ -85,3 +85,7 @@ As far as I'm aware the usage of the script should not get you banned. It requir
 Can I modify parts of your script?
 
 I've added comments in my script showcasing what I'm doing and what the commands are used for. If you're tech savy - yes, feel free to contribute on GitHub!
+
+I have created the task in task scheduler, but it doesn't do anything?
+
+Open task scheduler and check the task. Go to actions, check the paramters, make sure you inputted the path instead of EDIT_THIS. Verify that the task author is YOUR_PC_HERE\YOUR_USERNAME_HERE
