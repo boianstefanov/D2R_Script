@@ -26,46 +26,45 @@ What this script cannot do for you:
 If you see "EDIT_THIS" somewhere in the guide you're supposed to replace the value with whatever is the folder path that you chose on your PC.
 
 1. Go to https://github.com/boianstefanov/D2R-instances-launcher, click on Code > Download ZIP
-
-3. Next, we need to save a snapshot of your HD settings. Log in the game as you normally would and tweak all desired options. Exit the game. 
-4. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected, copy the Settings.json file 
-5. Paste(and replace) the Settings.json file in \D2R_Script\HDSettings
-6. Log in the game again, tweak all desired options (in this case to Low). Exit the game.
-7. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected and copy the Settings.json file again
-8. Paste(and replace) the Settings.json file in \D2R_Script\LDSettings
-9. Open Powershell and run the command** - it will ask you for credentials, input them for account1:
+2. Next, we need to save a snapshot of your HD settings. Log in the game as you normally would and tweak all desired options. Exit the game. 
+3. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected, copy the Settings.json file 
+4. Paste(and replace) the Settings.json file in \D2R_Script\HDSettings
+5. Log in the game again, tweak all desired options (in this case to Low). Exit the game.
+6. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected and copy the Settings.json file again
+7. Paste(and replace) the Settings.json file in \D2R_Script\LDSettings
+8. Open Powershell and run the command** - it will ask you for credentials, input them for account1:
 
 (Get-Credential).Password | ConvertFrom-SecureString | Out-File "EDIT_THIS\D2R_Script\account1.txt"
 
 **This secures your account credentials 
 
-10. Run the same command again, but this time use  account2.txt file for your second account - EDIT_THIS\D2R_Script\account2.txt"
-11. Edit (can be done with Windows PowerShell ISE or notepad) the "D2R_Force_LDsettings.ps1" file 
-12. Look for "EDIT_THIS" and replace the file path(s) accordingly. Example below:
+9. Run the same command again, but this time use  account2.txt file for your second account - EDIT_THIS\D2R_Script\account2.txt"
+10. Edit (can be done with Windows PowerShell ISE or notepad) the "D2R_Force_LDsettings.ps1" file 
+11. Look for "EDIT_THIS" and replace the file path(s) accordingly. Example below:
 The first occurrence of EDIT_THIS:
 $secure_file_path = "EDIT_THIS\D2R_Script\account2.txt" 
 We're replacing it with 
 $secure_file_path = "C:\Users\Username\Desktop\D2R_Script\account2.txt"
-13. Change the $username = "your_email_here@example.com" to your actual email for battle.net
-14. Save your changes.
-15. Do the same for the D2R_Force_HDsettings.ps1 file 
-16. You can now create shortcuts to D2R_Force_HDsettings.ps1 and D2R_Force_LDsettings.ps1, rename them to whatever you want and play the game! 
+12. Change the $username = "your_email_here@example.com" to your actual email for battle.net
+13. Save your changes.
+14. Do the same for the D2R_Force_HDsettings.ps1 file 
+15. You can now create shortcuts to D2R_Force_HDsettings.ps1 and D2R_Force_LDsettings.ps1, rename them to whatever you want and play the game! 
 
 OPTIONAL - if you don't want to press Yes/No every time and have the powershell window hidden:
 
-17. Open your start menu and search for Task Scheduler, run it.
-18. On the left side, right click Task Scheduler Library folder > New folder. Call it "D2R", press OK
-19. Go inside the D2R folder you just created and right click > "Create Task..." For name write anything you want, for example - "Run D2R without admin rights LD"
-20. Select "Run only when user is logged on" if it's not checked by default
-21. Check the box "Run with highest privileges"
-22. From the drop down menu "Configure for:" select "Windows 10"
-23. Go to "Actions" tab, click "New..."
-24. In the "Program/script:" field paste this: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-25. For Add arguments paste this: -WindowStyle hidden EDIT_THIS\D2R_Script\D2R_Force_LDsettings.ps1
-26. Press OK
-27. Go back to General tab
-28. Under Security options click on "Change User or Group..." and write: NAME_OF_YOUR_PC\YOUR_USERNAME_HERE
-28A. If you're not sure what the NAME_OF_YOUR_PC or YOUR_USERNAME_HERE is: check it by opening command prompt on your PC and type "whoami" then press Enter
+16. Open your start menu and search for Task Scheduler, run it.
+17. On the left side, right click Task Scheduler Library folder > New folder. Call it "D2R", press OK
+18. Go inside the D2R folder you just created and right click > "Create Task..." For name write anything you want, for example - "Run D2R without admin rights LD"
+19. Select "Run only when user is logged on" if it's not checked by default
+20. Check the box "Run with highest privileges"
+21. From the drop down menu "Configure for:" select "Windows 10"
+22. Go to "Actions" tab, click "New..."
+23. In the "Program/script:" field paste this: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+24. For Add arguments paste this: -WindowStyle hidden EDIT_THIS\D2R_Script\D2R_Force_LDsettings.ps1
+25. Press OK
+26. Go back to General tab
+27. Under Security options click on "Change User or Group..." and write: NAME_OF_YOUR_PC\YOUR_USERNAME_HERE
+28. If you're not sure what the NAME_OF_YOUR_PC or YOUR_USERNAME_HERE is: check it by opening command prompt on your PC and type "whoami" then press Enter
 29. Click "Check Names" on the right, then OK
 30. Press OK to save the scheduled task 
 31. Go to your desktop and right click > New > shortcut 
