@@ -18,10 +18,10 @@ $cred = [System.Runtime.InteropServices.Marshal]::PtrToStringBSTR([System.Runtim
 
 ######## Force LD settings before launching ########
 # EDIT THIS:
-$hd_settings_path = "EDIT_THIS\D2R_Script\LDsettings\Settings.json"
+$ld_settings_path = "EDIT_THIS\D2R_Script\LDsettings\Settings.json"
 $D2R_SETTINGS_PATH = "C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected\Settings.json"
 
-Copy-Item -Path $hd_settings_path -Destination $D2R_SETTINGS_PATH -Force
+Copy-Item -Path $ld_settings_path -Destination $D2R_SETTINGS_PATH -Force
 Start-Sleep 1
 
 ######## Launch the game ########
