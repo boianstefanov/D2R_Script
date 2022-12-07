@@ -7,7 +7,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 ######## Secure credentials ########
 
-# Use (Get-Credential).Password | ConvertFrom-SecureString | Out-File "C:\Users\EDIT_THIS\account1.txt"
+# Use (Get-Credential).Password | ConvertFrom-SecureString | Out-File "EDIT_THIS\D2R_Script\account1.txt"
 # EDIT THIS:
 $secure_file_path = "EDIT_THIS\D2R_Script\account1.txt"
 
