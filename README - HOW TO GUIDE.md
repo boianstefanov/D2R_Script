@@ -26,13 +26,14 @@ What this script cannot do for you:
 If you see "EDIT_THIS" somewhere in the guide you're supposed to replace the value with whatever is the folder path that you chose on your PC.
 
 1. Go to https://github.com/boianstefanov/D2R-instances-launcher, click on Code > Download ZIP
-2. Next, we need to save a snapshot of your HD settings. Log in the game as you normally would and tweak all desired options. Exit the game. 
-3. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected, copy the Settings.json file 
-4. Paste(and replace) the Settings.json file in \D2R_Script\HDSettings
-5. Log in the game again, tweak all desired options (in this case to Low). Exit the game.
-6. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected and copy the Settings.json file again
-7. Paste(and replace) the Settings.json file in \D2R_Script\LDSettings
-8. Open Powershell and run the command** - it will ask you for credentials, input them for account1:
+2. Extract the ZIP, copy it and put it into a folder of your choice, for example EDIT_THIS\D2R_Script (Note: the default folder name is D2R-Script-main)
+3. Next, we need to save a snapshot of your HD settings. Log in the game as you normally would and tweak all desired options. Exit the game. 
+4. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected, copy the Settings.json file 
+5. Paste(and replace) the Settings.json file in \D2R_Script\HDSettings
+6. Log in the game again, tweak all desired options (in this case to Low). Exit the game.
+7. Go to C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected and copy the Settings.json file again
+8. Paste(and replace) the Settings.json file in \D2R_Script\LDSettings
+9. Open Powershell and run the command** - it will ask you for credentials, input them for account1:
 
 (Get-Credential).Password | ConvertFrom-SecureString | Out-File "EDIT_THIS\D2R_Script\account1.txt"
 
