@@ -75,10 +75,13 @@ OPTIONAL - if you don't want to press Yes/No every time and have the powershell 
 ******** Frequently asked questions ********
 
 Do I need to download any additional software for this?
+
 Analogical to the ProcessExplorer's tutorials we need to use (basically the same thing) called Handler, it's in the Git repository, for your convenience. It's by Microsoft's sysinternals and can be officially downloaded here: https://docs.microsoft.com/en-us/sysinternals/downloads/handle
 
 Can I get banned for using this?
+
 As far as I'm aware the usage of the script should not get you banned. It requires you to buy 2 copies of the game and have 2 separate battle.net accounts. We're not automating anything in the game.
 
 Can I modify parts of your script?
+
 I've added comments in my script showcasing what I'm doing and what the commands are used for. If you're tech savy - yes, feel free to contribute on GitHub!
