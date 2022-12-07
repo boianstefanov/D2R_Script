@@ -18,7 +18,7 @@ $cred = [System.Runtime.InteropServices.Marshal]::PtrToStringBSTR([System.Runtim
 
 ######## Force HD settings before launching ########
 # EDIT THIS:
-$hd_settings_path = "EDIT_THIS\D2R_Script\LDsettings\Settings.json"
+$hd_settings_path = "EDIT_THIS\D2R_Script\HDsettings\Settings.json"
 $D2R_SETTINGS_PATH = "C:\Users\EDIT_THIS\Saved Games\Diablo II Resurrected\Settings.json"
 
 Copy-Item -Path $hd_settings_path -Destination $D2R_SETTINGS_PATH -Force
@@ -50,8 +50,8 @@ function Get-Choice {
         Write-Warning "DefaultChoice needs to be a value between 1 and $($Options.Count) or -1 (for none)"
         exit
     }
-    Add-Type –AssemblyName System.Windows.Forms
-    Add-Type –AssemblyName System.Drawing
+    Add-Type â€“AssemblyName System.Windows.Forms
+    Add-Type â€“AssemblyName System.Drawing
     [System.Windows.Forms.Application]::EnableVisualStyles()
     $script:result = ""
     $form = New-Object System.Windows.Forms.Form
@@ -72,13 +72,13 @@ function Get-Choice {
     $buttonWidth = [Math]::Max($minButtonWidth, $buttonWidth)
     $formWidth =  [Windows.Forms.TextRenderer]::MeasureText($Title,$form.Font).Width
     $spaceWidth = ($options.Count+1) * $spacing
-    $formWidth = ($formWidth, $minFormWidth, ($buttonWidth * $Options.Count + $spaceWidth) | Measure-Object –Maximum).Maximum
+    $formWidth = ($formWidth, $minFormWidth, ($buttonWidth * $Options.Count + $spaceWidth) | Measure-Object â€“Maximum).Maximum
     $form.ClientSize = New-Object System.Drawing.Size($formWidth,$formHeight)
     $index = 0
     #create the buttons dynamically based on the options
     foreach ($option in $Options){
-        Set-Variable "button$index" –Value (New-Object System.Windows.Forms.Button)
-        $temp = Get-Variable "button$index" –ValueOnly
+        Set-Variable "button$index" â€“Value (New-Object System.Windows.Forms.Button)
+        $temp = Get-Variable "button$index" â€“ValueOnly
         $temp.Size = New-Object System.Drawing.Size($buttonWidth,$buttonHeight)
         $temp.UseVisualStyleBackColor = $True
         $temp.Text = $option
@@ -102,14 +102,14 @@ function Get-Choice {
 #######
 
 
-$options = ‘Europe’, ‘Americas’, ‘Asia’
+$options = â€˜Europeâ€™, â€˜Americasâ€™, â€˜Asiaâ€™
 $region = Get-Choice -Title "Select a region to play on" -Options $options -DefaultChoice 1
 
-if ($region -eq ‘Europe’) { 
+if ($region -eq â€˜Europeâ€™) { 
     $region = "eu.actual.battle.net" }
-elseif ($region -eq ‘Americas’) { 
+elseif ($region -eq â€˜Americasâ€™) { 
     $region = "us.actual.battle.net" }
-elseif ($region -eq ‘Asia’) { 
+elseif ($region -eq â€˜Asiaâ€™) { 
     $region = "kr.actual.battle.net" }
 
 
